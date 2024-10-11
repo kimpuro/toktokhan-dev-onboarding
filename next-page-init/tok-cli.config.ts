@@ -5,6 +5,7 @@ import { genIcon } from '@toktokhan-dev/cli-plugin-gen-icon-chakra'
 import { genImg } from '@toktokhan-dev/cli-plugin-gen-img'
 import { genRoutePage } from '@toktokhan-dev/cli-plugin-gen-route-pages'
 import { genTheme } from '@toktokhan-dev/cli-plugin-gen-theme-chakra'
+import {printText} from "./scripts/plugin-text";
 
 const config: RootConfig<{
   plugins: [
@@ -14,9 +15,10 @@ const config: RootConfig<{
     typeof genTheme,
     typeof genIcon,
     typeof commit,
+    typeof printText,
   ]
 }> = {
-  plugins: [genImg, genRoutePage, genApi, genTheme, genIcon, commit],
+  plugins: [genImg, genRoutePage, genApi, genTheme, genIcon, commit, printText],
   'gen:img': {
     input: 'public/images',
     oneDepth: true,
@@ -44,5 +46,9 @@ const config: RootConfig<{
   'gen:icon': {
     input: 'public/icons',
   },
+  'print:text' : {
+    input: 'Hello, World!',
+    output: './src/generated/print-text.txt',
+  }
 }
 export default config
