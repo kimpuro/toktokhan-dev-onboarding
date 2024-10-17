@@ -33,7 +33,7 @@ const config: RootConfig<{
   'gen:theme': {
     tokenModes: {
       colors: {
-        light: 'light',
+        light: 'fake-light',
         dark: 'dark',
       },
       textStyles: {
