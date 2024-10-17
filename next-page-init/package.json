@@ -18,7 +18,8 @@
     "commit": "tokript2 commit",
     "theme": "chakra-cli tokens src/configs/theme/index.ts",
     "theme:open": "code -r node_modules/@chakra-ui/styled-system/dist/theming.types.d.ts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "gen:api": "tokript2 gen:api"
   },
   "dependencies": {
     "@chakra-ui/anatomy": "^2.2.2",

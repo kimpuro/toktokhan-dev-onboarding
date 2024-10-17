@@ -28,7 +28,18 @@ const config: RootConfig<{
     oneDepth: true,
   },
   'gen:api': {
-    swaggerSchemaUrl: 'https://sales-api-dev.pluuug.com/openapi.json/',
+    swaggerSchemaUrl: 'http://localhost:5001/api-json',
+    output : 'src/generated/swagger',
+    instancePath:'@/configs/axios/instance',
+    includeReactQuery: true,
+    includeReactInfiniteQuery: true,
+    paginationSets: [
+      {
+        keywords: ['cursor', 'limit'],
+        nextKey: 'cursor',
+        getNextPageParam: `(lastPage) => { return lastPage.next }`,
+      },
+    ],
   },
   'gen:theme': {
     tokenModes: {
