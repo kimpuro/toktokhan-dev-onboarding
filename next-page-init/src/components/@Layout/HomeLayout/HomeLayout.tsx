@@ -5,13 +5,13 @@ import {
   Grid,
   GridItem,
   GridItemProps,
-  keyframes,
 } from '@chakra-ui/react'
 
 import { LAYOUT } from '@/constants/layout'
 
 import HomeFooter from './components/HomeFooter'
 import HomeHeader from './components/HomeHeader'
+import {keyframes} from "@emotion/react";
 
 interface HomeLayoutProps {
   header?: JSX.Element

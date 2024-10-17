@@ -1,7 +1,9 @@
 import { Center, Text } from '@chakra-ui/react'
+import TemplateLayout from "@/components/@Templates/TemplateLayout";
 
 function Home() {
   return (
+      <TemplateLayout title={"Home"}>
     <Center h={'100%'} borderRadius={'8px'} flexDir={'column'} gap={'20px'}>
       <Text
         color={'primary.3'}
@@ -14,6 +16,7 @@ function Home() {
         Next page template
       </Text>
     </Center>
+      </TemplateLayout>
   )
 }
 export default Home
